@@ -1,14 +1,21 @@
 import tkinter as tk
 import random
+
 def on_closing():
     pass
+
+
 def Well():
     welc.pack_forget()
     ending.pack()
     win.update()
     win.after(3000, win.quit())
+    
+    
 def gg():
     btn2.place(x=random.randint(20, 200), y=random.randint(20, 200))
+    
+    
 x, y = 160, 120
 win = tk.Tk()
 win.protocol("WM_DELETE_WINDOW", on_closing)
@@ -23,4 +30,5 @@ btn2.place(x=160, y=120)
 ending = tk.Label(win, text='''Я знал :)''', width = 150, height=300, font='20')
 welc = tk.Label(win, text='''Ты дурачек?''', width = 50, font='20')
 welc.pack(pady=(10, 0))#; out.pack()
+
 win.mainloop()
